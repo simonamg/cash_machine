@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper" class="col-md-12 centered">
+        <h1>Cash</h1>
+        <div class="col-md-6 centered">
+
+            <table class="table">
+                <tr>
+                    <th>Value</th>
+                    <th>Amount</th>
+                </tr>
+                {% for key, value in cash %}
+                    <tr>
+                        <td>{{ key }}</td>
+                        <td>{{ value }}</td>
+                    </tr>
+                {% endfor %} 
+
+            </table>
+
+            <br>
+            <a href="{{ path('homepage') }}">Return</a>
+        </div>
+
+    </div>
+{% endblock %}

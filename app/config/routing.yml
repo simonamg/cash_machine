@@ -1,3 +1,11 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+homepage:
+    path:      /
+    defaults:  { _controller: AppBundle:Cash:index}
+    
+withdraw:
+    path:      /withdraw
+    defaults:  { _controller: AppBundle:Cash:withdraw}
